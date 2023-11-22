@@ -1,0 +1,5 @@
+input_sum = input()
+numbers= input_sum.split('+')
+numbers.sort()
+output='+'.join(numbers)
+print(output)
