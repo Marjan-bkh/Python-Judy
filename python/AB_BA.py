@@ -1,21 +1,37 @@
+# def check_string(string):
+#     if "AB" in string and "BA" in string:
+#         if abs(string.index("AB")- string.index("BA")) >1:
+#             return'YES'
+#     return 'NO'
+
+# string= input()
+
+# print(check_string(string))
+
+
 def check_string(string):
-    if "AB" in string and "BA" in string:
-        if abs(string.index("AB")- string.index("BA")) >1:
-            return'YES'
+    index_ab = string.find("AB")
+    print(index_ab)
+    index_ba = string.find("BA")
+    print(index_ba)
+    if index_ab != -1 and index_ba != -1 and abs(index_ab - index_ba) > 1:
+        return 'YES'
     return 'NO'
 
-string= input()
-
+string = input()
 print(check_string(string))
 
-# import re
-# string = input().upper()
-# substring_1 = 'AB'
-# substring_2 = 'BA'
-# print(re.search(substring_1,string))
-# print( re.search(substring_2,string))
+# def check_string(string):
+#     index_ab = string.find("AB")
+#     index_ba = string.find("BA")
+#     while index_ab != -1 and index_ba != -1:
+#         if abs(index_ab - index_ba) > 1:
+#             return 'YES'
+#         if index_ab < index_ba:
+#             index_ab = string.find("AB", index_ab + 2)
+#         else:
+#             index_ba = string.find("BA", index_ba + 2)
+#     return 'NO'
 
-# if re.search(substring_1,string) and re.search(substring_2,string):
-#     print('YES')
-# else:
-#     print('NO')s
+# string = input()
+# print(check_string(string))
